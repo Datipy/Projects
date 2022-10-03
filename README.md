@@ -1,2 +1,1 @@
-# projects_formation
-all project
+# projets de formation sous jupyter notebook
