@@ -1,6 +1,6 @@
 # Dossier des projets de formation
 
-Ce dossier comprend les projets les plus complets de formation sous jupyter et les outils ojets "Datipy" que j’ai commencé à écrire pour accompagner et faciliter mon travail d’analyse de données.
+Ce dossier comprend les projets les plus complets de formation sous jupyter et les outils ojets "Datipy" que j’ai commencé à écrire pour accompagner et faciliter mon travail d’analyse de données. Il sera complété par d’autres projets divers.
 
 - Ipywidgets :
 
@@ -24,4 +24,9 @@ Ce dossier comprend les projets les plus complets de formation sous jupyter et l
     - Datipy : affiche les tables selon leurs attributs sélectionnés. Toutes les classes suivantes héritent de Datipy et conserve cette fonctionnalité.
     - Display : L’affichage fait appel à d’autres librairie pour faciliter la lecture statistique des tables (ex : researchpy)
     - Scribe : Permet de filtrer l’afffichage avec des sélections simples ou multiples.
-    - Outsider (à repenser) : Permet de traiter les outliers visuellement avec un tableau de commande.
+    - Outsider (à repenser) : Permet de traiter les outliers visuellement avec un tableau de commandes intéractives.
+
+
+- Crédits :
+  À l’ensemble des personnes qui ont rédigé les librairies et leur documentation respective que j’utilise pour developper mes compétences en programmation.
+  À l’ensemble des proches et mentors qui m’accompagnent de par leurs conseils et leur soutien.
