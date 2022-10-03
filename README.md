@@ -2,7 +2,7 @@
 
 Ce dossier comprend les projets les plus complets de formation sous jupyter et les outils ojets "Datipy" que j’ai commencé à écrire pour accompagner et faciliter mon travail d’analyse de données.
 
-Ipywidgets :
+- Ipywidgets :
 
   - Les projets sont réalisés sous jupyter et utilisent la librairie "ipywidgets" pour avoir des fonctions intéractives afin de naviguer plaus facilement dans les données et les graphiques ou objets créés à partir de celles-ci
 
@@ -12,7 +12,7 @@ Ipywidgets :
   - La librairie se touve à cette adresse pour plus de détails du fonctionnement des décorateurs intéractifs : 
     - https://ipywidgets.readthedocs.io/en/stable/
  
-Datipy (OOP):
+- Datipy (OOP):
 
   - Le fichier python Datipy.py a été écrit avec ses différentes classes en début de formation doit être réécrit et repensé avec un meilleur code.
   - L’ajout des classes sur ce git est en cours.
