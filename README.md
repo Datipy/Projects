@@ -31,6 +31,5 @@ Ce dossier comprend les projets les plus complets de formation sous jupyter et l
     - Outsider (à repenser) : Permet de traiter les outliers visuellement avec un tableau de commandes intéractives.
 
 
-- Crédits :
+- Remerciements :
   À l’ensemble des personnes qui ont rédigé les librairies et leur documentation respective que j’utilise pour developper mes compétences en programmation.
-  À l’ensemble des proches et mentors qui m’accompagnent de par leurs conseils et leur soutien.
