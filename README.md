@@ -15,6 +15,8 @@ Ce dossier comprend les projets les plus complets de formation sous jupyter et l
 - Datipy (OOP):
 
   - Datipy est un ensemble de classes fait afin de travailler plus facilement avec des tables pour diverses tâches : visualisation, recherche, édition, etc.
+  - Datipy travaille actuellement avec des dictionnaires qui référencent les tables à traiter.
+
   - Le fichier python Datipy.py a été écrit avec ses différentes classes en début de formation et doit être réécrit et repensé avec un meilleur code.
   - L’ajout des classes en questions sur ce git est en cours.
   
