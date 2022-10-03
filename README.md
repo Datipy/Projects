@@ -17,9 +17,11 @@ Ce dossier comprend les projets les plus complets de formation sous jupyter et l
   - Datipy est un ensemble de classes fait afin de travailler plus facilement avec des tables pour diverses tâches : visualisation, recherche, édition, etc.
   - Le fichier python Datipy.py a été écrit avec ses différentes classes en début de formation et doit être réécrit et repensé avec un meilleur code.
   - L’ajout des classes en questions sur ce git est en cours.
+  
   - Les différentes classes s’utilisent de la manière suivante par exemple pour appeler "Display":
     - name_object = Display(dictionnary_name)
     - name_object.interact()
+    
   - Liste des classes de Datipy :
     - Datipy : affiche les tables selon leurs attributs sélectionnés. Toutes les classes suivantes héritent de Datipy et conserve cette fonctionnalité.
     - Display : L’affichage fait appel à d’autres librairie pour faciliter la lecture statistique des tables (ex : researchpy)
