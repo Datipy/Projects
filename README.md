@@ -9,7 +9,7 @@ Ipywidgets :
   - La librairie s’installe normalement en debut de chaque notobook où elle est utilisée avec la commande : !conda install ipywidgets
   - Si toutes fois un problème surgissait, la librairie s’installe depuis "Anaconda prompt" avec la commande suivante : pip install ipywidgets
 
-  - La librairie se touve à cette adresse pour plus de détails du fonctionnement des décorateurs intératifs : 
+  - La librairie se touve à cette adresse pour plus de détails du fonctionnement des décorateurs intéractifs : 
     - https://ipywidgets.readthedocs.io/en/stable/
  
 Datipy (OOP):
