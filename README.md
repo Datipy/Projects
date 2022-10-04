@@ -1,6 +1,6 @@
 # Dossier des projets
 
-Ce dossier comprend les projets les plus complets sous jupyter et les outils objets "Datipy" que j’ai commencé à écrire pour accompagner et faciliter mon travail d’analyse de données. Il sera complété par d’autres projets divers.
+Ce dossier comprend les projets les plus complets sous jupyter et les outils "Datipy" que j’ai commencé à écrire pour accompagner et faciliter mon travail d’analyse de données. Il sera complété par d’autres projets divers.
 
 - Ipywidgets :
 
