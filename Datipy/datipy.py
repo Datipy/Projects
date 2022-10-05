@@ -1,6 +1,10 @@
 # -----------------------------------------------------------
 # Datipy est un ensemble d’outils pour faciliter la lecture 
 # des tables avant de procéder au nettoyage puis aux analyses.
+#
+# Actuellement les classes utilisent un dictionnaire contenant
+# les tables. Le code est en train d’être actualisé pour
+# travailler avec un dictionnaire reférençant les tables
 # -----------------------------------------------------------
 
 # librairie pour avoir les décorateurs intéractifs
