@@ -14,7 +14,7 @@ class My_db_connector():
        and execute queries"""
     
     def __init__(self, db_name):
-        """connection and cursor object online"""
+        """connection and cursor objects online"""
         
         self.db_name = db_name
         self.connection = sql.connect("{}.db".format(self.db_name))
@@ -30,9 +30,13 @@ class My_db_connector():
     def db_execute_query(self, query):
         return pd.read_sql(query, self.connection)
     
+    # execute to_sql() from pandas to add dataframe to database
+    def df_to_sql(self, df, table, choice="replace"):
+        return df.to_sql(table, self.connection, if_exists=choice, index=df[table+"_id"])
+    
     # close connection to database
     def db_close_connection(self):
         self.connection.commit()
         self.cursor.close()
         self.connection.close()
-        return "Connection to '{}' database closed successful".format(self.db_name)
+        return "Connection to '{}' database closed successfully".format(self.db_name)
