@@ -36,7 +36,7 @@ def table_add_column(values, sql_type):
 # append all Columns for each attributs selected
 def add_all_columns(dict_list):
     # dict to translate data_type into sql_type
-    sql_type = {"int64": Integer,
+    sql_type_dict = {"int64": Integer,
                   "float64": Float,
                   "object": String,
                   "datetime64[ns]": DateTime}
@@ -44,7 +44,7 @@ def add_all_columns(dict_list):
     # iterate for rows in csv_file
     for dictionnary in dict_list:
         values = list(dictionnary.values())
-        sql_type = sql_type[values[2]]
+        sql_type = sql_type_dict[values[2]]
         table_add_column(values, sql_type)
     print("Columns added to Tables successfully", "\n")
 
