@@ -1,0 +1,14 @@
+Table,Column,data_type
+vente,date_mutation,datetime64[ns]
+vente,valeur_fonciere,float64
+vente,code_id_commune,int64
+vente,commune,object
+vente,code_departement,object
+vente,surface_carrez_du_1er_lot,float64
+vente,type_local,object
+vente,nombre_pieces_principales,int64
+logement,no_voie,float64
+logement,type_de_voie,object
+logement,code_voie,object
+logement,voie,object
+logement,commune,object
