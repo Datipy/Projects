@@ -17,16 +17,13 @@ def csv_to_dict(csv_file):
         reader = csv.reader(csv_file) 
         columns = next(reader) # get csv columns and move reader
         
-        # need code for iteration
-        dictionnary_list = []
+        # loop to load dict
+        dictionnaries_list = []
         for rows in reader:
-            dictionnary = {columns[0]:rows[0],
-                           columns[1]:rows[1],
-                           columns[2]:rows[2],
-                           }
-            dictionnary_list.append(dictionnary)
+            # add each row to list
+            dictionnary = {}
+            for i in range(len(columns)):
+                dictionnary[columns[i]] = rows[i]
+            dictionnaries_list.append(dictionnary)
     csv_file.close()
-    return dictionnary_list
-
-if __name__ == '__main__':
-    dict_to_csv(arg)
+    return dictionnaries_list
