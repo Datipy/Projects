@@ -18,12 +18,15 @@ def metadata_online():
     
 """ functions to create all tables"""    
     
+# get_table set of unique table
+def get_dict_set(dict_list):
+    return set([list(dict.values())[0] for dict in dict_list])
+
 # Warning : Tables are not defined 
 # only passed to metadata_obj
 def create_all_tables(dict_list):
-    # get_table set of unique table
-    table_set = set([list(dict.values())[0] for dict in dict_list])
-
+    # get set of tables
+    table_set = get_dict_set(dict_list)
     # create tables for table in set
     for table in table_set:
         Table(table, 
@@ -37,15 +40,16 @@ def create_all_tables(dict_list):
 """ functions to add all columns to tables """ 
 
 # get table from metadata_obj
-def get_table(key):
-    return metadata_obj.tables[key]
-    
+def get_table(table_name):
+    return metadata_obj.tables[table_name]
+
 # append Column to Table in metadata_obj
-def table_add_column(values, sql_type):   
+def table_add_column(sql_type, table_name, column_name, data_type):   
     # define Column
-    column_obj = Column(values[1], sql_type)
+    column_obj = Column(column_name, sql_type)
     # get table to append column
-    table = get_table(values[0])
+    table = get_table(table_name)
+    # append column
     return table.append_column(column_obj)
 
 # append all Columns for each attributs selected
@@ -58,9 +62,12 @@ def add_all_columns(dict_list):
     
     # iterate for rows in csv_file
     for dictionary in dict_list:
-        values = list(dictionary.values())
-        sql_type = sql_type_dict[values[2]]
-        table_add_column(values, sql_type)
+        # get data_type from dictionary
+        data_type = str(dictionary["data_type"])
+        # get sql_type from sql_type_dict
+        sql_type = sql_type_dict[data_type]
+        # add all columns
+        table_add_column(sql_type, **dictionary)
     print("Columns added to Tables successfully", "\n")
 
     
