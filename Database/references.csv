@@ -1,0 +1,4 @@
+table_name,referenced_by
+sell,features
+sell,street
+sell,commune

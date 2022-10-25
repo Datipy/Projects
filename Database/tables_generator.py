@@ -25,8 +25,10 @@ def get_dict_set(dict_list):
 # Warning : Tables are not defined 
 # only passed to metadata_obj
 def create_all_tables(dict_list):
+    
     # get set of tables
     table_set = get_dict_set(dict_list)
+    
     # create tables for table in set
     for table in table_set:
         Table(table, 
@@ -44,30 +46,37 @@ def get_table(table_name):
     return metadata_obj.tables[table_name]
 
 # append Column to Table in metadata_obj
-def table_add_column(sql_type, table_name, column_name, data_type):   
+def table_add_column(sql_type, table_name, column_name, data_type):  
+    
     # define Column
     column_obj = Column(column_name, sql_type)
+    
     # get table to append column
     table = get_table(table_name)
-    # append column
+    
     return table.append_column(column_obj)
 
 # append all Columns for each attributs selected
 def add_all_columns(dict_list):
+    
     # dict to translate data_type into sql_type
     sql_type_dict = {"int64": Integer,
-                  "float64": Float,
-                  "object": String,
-                  "datetime64[ns]": DateTime}
+                      "float64": Float,
+                      "object": String,
+                      "datetime64[ns]": DateTime}
     
     # iterate for rows in csv_file
     for dictionary in dict_list:
+        
         # get data_type from dictionary
         data_type = str(dictionary["data_type"])
+        
         # get sql_type from sql_type_dict
         sql_type = sql_type_dict[data_type]
+        
         # add all columns
         table_add_column(sql_type, **dictionary)
+        
     print("Columns added to Tables successfully", "\n")
 
     
@@ -81,37 +90,34 @@ def define_foreign_column(referenced_by):
                  )
 
 # add Foreign_key to table
-def add_fkey_to_table(table, referenced_by):
+def add_fkey_to_table(table_name, referenced_by):
     fkey = define_foreign_column(referenced_by)
-    return get_table(table).append_column(fkey)
+    return get_table(table_name).append_column(fkey)
 
 # add all references to table
 def add_references(ref_dict_list):
+    
     # unpack ref_dict_list
     for dictionary in ref_dict_list:
         add_fkey_to_table(**dictionary)
-
-                
-""" functions to display final result"""                
-                
-# display all tables in metadata_obj
-def display_metadata_tables(metadata_obj):
-    print("metadata_obj :", "\n")
-        
-    for value in metadata_obj.tables.values():
-        for column in value.columns.keys():
-            print("Table :", value, 
-                  "; Column :", column) # add data_type
-                                        # change params
-                                        # to match sql method
                     
-if __name__ == '__main__':
+# main program
+def main():
+    
     # load tables
     tables_dict_list = csv_to_dict("tables.csv")
+    
     # load references
     ref_dict_list = csv_to_dict("references.csv")
+    
+    # define metadata
     metadata_online()
+    
+    # define tables and relations
     create_all_tables(tables_dict_list)
     add_all_columns(tables_dict_list)
     add_references(ref_dict_list)
-    display_metadata_tables(metadata_obj)
+
+                    
+if __name__ == '__main__':
+    main()

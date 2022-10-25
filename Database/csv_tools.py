@@ -28,7 +28,7 @@ def define_reference_list(ref_dict):
     for key, values in ref_dict.items():
         # for each table’s reference
         for value in values:
-            template = {"table": key, 
+            template = {"table_name": key, 
                         "referenced_by": value,
                        }
             # add template to list
